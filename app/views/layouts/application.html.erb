@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LoginDemo</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %><%= csp_meta_tag %>
+  <style>
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;font-family:system-ui,sans-serif;background:#f2f5fa;color:#192338;display:grid;place-items:center;padding:24px}
+    .panel{width:100%;max-width:460px;background:#fff;padding:34px;border-radius:18px;box-shadow:0 14px 45px #18203312}
+    h1{margin:0 0 8px;font-size:28px}p{color:#647089;line-height:1.5}label{display:block;margin:18px 0 7px;font-weight:650;font-size:14px}
+    input{width:100%;padding:13px;border:1px solid #d9dfeb;border-radius:9px;font:inherit}button{width:100%;margin-top:22px;padding:14px;border:0;border-radius:9px;color:white;background:#3157d5;font-size:15px;font-weight:700}
+    .notice,.alert{padding:12px;border-radius:8px;margin:15px 0}.notice{background:#eaf7ef;color:#17653a}.alert{background:#fff1ed;color:#a33a22}
+  </style>
+</head>
+<body><main class="panel">
+  <% if notice %><div class="notice"><%= notice %></div><% end %>
+  <% if alert %><div class="alert"><%= alert %></div><% end %>
+  <%= yield %>
+</main></body></html>
