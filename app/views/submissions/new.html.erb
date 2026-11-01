@@ -1,0 +1,9 @@
+<h1>Enter usernames</h1>
+<p>Fill in both fields and submit the form.</p>
+<%= form_with url: submit_path, method: :post, local: true do |form| %>
+  <label for="username1">Username 1</label>
+  <%= form.text_field :username1, id: "username1", required: true, maxlength: 120, autocomplete: "off", placeholder: "Enter first username" %>
+  <label for="username2">Username 2</label>
+  <%= form.text_field :username2, id: "username2", required: true, maxlength: 120, autocomplete: "off", placeholder: "Enter second username" %>
+  <%= form.submit "Submit" %>
+<% end %>
